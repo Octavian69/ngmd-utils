@@ -85,9 +85,6 @@ export class ExampleComponent {
 
 ### InterceptorHeaders
 
-Объект c полем *headers* типа *header-name:header-value*
-
-**Интерфейс**
 ```ts
 type InterceptorHeaders<T = string> = { 
   headers: {

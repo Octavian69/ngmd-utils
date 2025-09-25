@@ -27,6 +27,9 @@
       "@ng-doc/generated": ["projects/docs/ng-doc/docs/index.ts"],
       "@ng-doc/generated/*": ["projects/docs/ng-doc/docs/*"],
       "@docs-core/*": ["projects/docs/src/app/core/*"],
+      "@ng-doc-en/generated": ["projects/docs-en/ng-doc/docs-en/index.ts"],
+      "@ng-doc-en/generated/*": ["projects/docs-en/ng-doc/docs-en/*"],
+      "@docs-core-en/*": ["projects/docs-en/src/app/core/*"],
       "@data/*": ["src/app/data/*"]
     },
     "lib": ["dom", "es2022"],

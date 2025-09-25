@@ -183,7 +183,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/docs/public",
+                "input": "assets/",
                 "output": "assets/"
               },
               {
@@ -263,6 +263,145 @@
               "projects/docs/src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "docs-en": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/docs-en",
+      "sourceRoot": "projects/docs-en/src",
+      "prefix": "ng",
+      "architect": {
+        "build": {
+          "builder": "@ng-doc/builder:application",
+          "options": {
+            "browser": "projects/docs-en/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/docs-en/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "assets/",
+                "output": "assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@ng-doc/ui-kit/assets",
+                "output": "assets/ng-doc/ui-kit"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@ng-doc/app/assets",
+                "output": "assets/ng-doc/app"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/docs-en/ng-doc/docs/assets",
+                "output": "assets/ng-doc"
+              }
+            ],
+            "styles": [
+              "node_modules/@ng-doc/app/styles/global.css",
+              "projects/docs-en/src/styles.scss"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "ngDoc": {
+                "config": "./projects/docs-en/ng-doc.config.ts"
+              },
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "5MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "1MB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "ngDoc": {
+                "config": "./projects/docs-en/ng-doc.config.ts"
+              },
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@ng-doc/builder:dev-server",
+          "options": {
+            "port": 4300
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "docs-en:build:production"
+            },
+            "development": {
+              "buildTarget": "docs-en:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/docs-en/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/docs-en/public"
+              }
+            ],
+            "styles": [
+              "projects/docs-en/src/styles.scss"
+            ]
           }
         }
       }

@@ -255,7 +255,7 @@ class StoreComponent {
 
 ## Types
 
-### StateConfig
+### StoreConfig
 
 **Интерфейс**
 
