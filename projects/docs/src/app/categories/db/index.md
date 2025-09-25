@@ -180,7 +180,7 @@ export class DbComponent {
     const pet: IAnimal = this.db.get(['pet']);
     
     navOptions[0].userRole // It's defined as TUserRole
-    cat.type // It's defined as TAnimal
+    pet.type // It's defined as TAnimal
   }
 }
 ```
