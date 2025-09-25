@@ -14,4 +14,4 @@ npm i @ngmd/utils
 
 ## Resources
 
-Explore the [repository](https://github.com/Octavian69/ngmd-utils) and [documentation](https://md-utils.web.app/getting-started/installation) 
+Explore the [repository](https://github.com/Octavian69/ngmd-utils) and documentation [RU](https://md-utils.web.app/getting-started/installation), [EN](https://md-utils-en.web.app/getting-started/installation)

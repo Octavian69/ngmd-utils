@@ -323,6 +323,8 @@ class ExampleComponent {
 
 ### SendOptionsPipe
 
+Функция `pipe` из библиотеки RxJS
+
 **Интерфейс**
 
 ```ts

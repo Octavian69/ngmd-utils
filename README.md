@@ -17,5 +17,5 @@ Library address in [npm](https://www.npmjs.com/package/@ngmd/utils)
 
 ## Documentation
 
-You can find documentation [here](https://md-utils.web.app/getting-started/installation).
+You can find documentation here: [RU](https://md-utils.web.app/getting-started/installation), [EN](https://md-utils-en.web.app/getting-started/installation)
 
